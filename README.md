@@ -20,11 +20,14 @@ A mini e-commerce Flutter app featuring:
 - Responsive UI with product grid
 - Simple and clean login/register screen
 
-## Getting Started
 
-1. Clone this repo
-2. Run `flutter pub get`
-3. Run on your emulator or device
+-  User Login/Register with form validation
+-  Add to Cart functionality
+-  favorites list
+-  Theme Toggle (Dark/Light) using SharedPreferences
+-  State management with Provider
+- REST API integration using [FakeStoreAPI](https://fakestoreapi.com)
+
 
 ## Author
 
