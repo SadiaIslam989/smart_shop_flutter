@@ -2,15 +2,39 @@
 
 A new Flutter project.
 
-## Getting Started
+# Smart Shop Flutter
 
-This project is a starting point for a Flutter application.
+A mini e-commerce Flutter app featuring:
+- User Authentication (Register/Login/Logout)
+- Product listing with search, sorting, and favorites
+- Shopping cart management
+- Dark and Light theme toggling
+- Persistent user session with SharedPreferences
+- Data fetched from FakeStore API
 
-A few resources to get you started if this is your first Flutter project:
+## Features
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Provider for state management
+- SharedPreferences for data persistence
+- Theme switching
+- Responsive UI with product grid
+- Simple and clean login/register screen
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+-  User Login/Register with form validation
+-  Add to Cart functionality
+-  favorites list
+-  Theme Toggle (Dark/Light) using SharedPreferences
+-  State management with Provider
+- REST API integration using [FakeStoreAPI](https://fakestoreapi.com)
+
+
+## Author
+
+Sadia Islam
+
+
+
+
+
+\
