@@ -71,7 +71,6 @@ class _HomeScreenState extends State<HomeScreen> {
             return product.name.toLowerCase().contains(_searchQuery.toLowerCase());
           }).toList();
 
-    
     if (_sortOption == 'Price: Low to High') {
       filteredProducts.sort((a, b) => a.price.compareTo(b.price));
     } else if (_sortOption == 'Price: High to Low') {
@@ -133,7 +132,7 @@ class _HomeScreenState extends State<HomeScreen> {
               Navigator.pushReplacementNamed(context, '/login');
             },
           ),
-          const SizedBox(width: 6), 
+          const SizedBox(width: 6),
         ],
       ),
       body: RefreshIndicator(
@@ -172,13 +171,23 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               const SizedBox(height: 12),
 
-              // Sort dropdown
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  const Text("Sort by:"),
-                  DropdownButton<String>(
+              // Sort Dropdown (improved style)
+              Align(
+                alignment: Alignment.centerRight,
+                child: SizedBox(
+                  width: 220,
+                  child: DropdownButtonFormField<String>(
                     value: _sortOption,
+                    decoration: InputDecoration(
+                      labelText: 'Sort by',
+                      filled: true,
+                      fillColor: Theme.of(context).cardColor,
+                      contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(30),
+                      ),
+                    ),
+                    style: Theme.of(context).textTheme.bodyMedium,
                     items: const [
                       DropdownMenuItem(value: 'None', child: Text('None')),
                       DropdownMenuItem(value: 'Price: Low to High', child: Text('Price: Low to High')),
@@ -191,8 +200,9 @@ class _HomeScreenState extends State<HomeScreen> {
                       });
                     },
                   ),
-                ],
+                ),
               ),
+
               const SizedBox(height: 12),
 
               // Product grid

@@ -12,7 +12,7 @@ class DrawerWidget extends StatelessWidget {
             accountName: const Text("Smart Shopper"),
             accountEmail: const Text("user@example.com"),
             currentAccountPicture: const CircleAvatar(
-              backgroundImage: AssetImage('assets/images/avatar.png'), // Add an asset or replace with NetworkImage
+              backgroundImage: AssetImage('assets/images/avatar.png'), 
             ),
             decoration: BoxDecoration(
               color: Theme.of(context).colorScheme.primary,
@@ -45,8 +45,6 @@ class DrawerWidget extends StatelessWidget {
             leading: const Icon(Icons.person),
             title: const Text("Profile"),
             onTap: () {
-              // Add profile screen route if you have one
-              // Navigator.pushNamed(context, '/profile');
               ScaffoldMessenger.of(context).showSnackBar(
                 const SnackBar(content: Text('Profile screen coming soon!')),
               );
